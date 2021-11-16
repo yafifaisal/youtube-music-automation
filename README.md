@@ -7,6 +7,7 @@ Youtube Music Automation Test is a simple project of automation framewrok using 
 ### Dependencies
 
 - JDK version 16
+- Chrome version : >= 95
 
 ### Installing
 

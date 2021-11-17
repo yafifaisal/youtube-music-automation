@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.youtube.music.test.SignInTest">
+      <class name="com.youtube.music.test.PlaySong">
         <methods>
+          <include name="playPreviousSong"/>
           <include name="invokeBrowser"/>
-          <include name="signInTest"/>
+          <include name="quitBrowser"/>
         </methods>
-      </class> <!-- com.youtube.music.test.SignInTest -->
+      </class> <!-- com.youtube.music.test.PlaySong -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

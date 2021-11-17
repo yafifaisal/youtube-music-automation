@@ -6,11 +6,14 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -111,6 +114,41 @@ public class BaseUI {
 	public void enterText(String elementKey, String text) {
 		getElement(elementKey).sendKeys(testDataProp.getProperty(text));
 		getElement(elementKey).sendKeys(Keys.ENTER);
+	}
+
+	public void assertElementDisplayed(String elementKey) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		getElement(elementKey).isDisplayed();
+	}
+
+	public void scrollDownToElement(String elementKey) {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].scrollIntoView();", getElement(elementKey));
+		js.executeScript("window.scrollBy(0,500)", "");
+
+	}
+
+	public String getElementText(String elementKey) {
+		return getElement(elementKey).getText();
+	}
+
+	public void assertTextEquals(String text1, String text2) {
+		Assert.assertEquals(text1, text2);
+	}
+
+	public void assertTextNotEquals(String text1, String text2) {
+		Assert.assertNotEquals(text1, text2);
 	}
 
 }

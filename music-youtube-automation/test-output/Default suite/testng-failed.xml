@@ -5,6 +5,7 @@
     <classes>
       <class name="com.youtube.music.test.SignInTest">
         <methods>
+          <include name="invokeBrowser"/>
           <include name="signInTest"/>
         </methods>
       </class> <!-- com.youtube.music.test.SignInTest -->

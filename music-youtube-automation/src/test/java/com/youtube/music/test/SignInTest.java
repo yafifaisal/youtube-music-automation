@@ -8,9 +8,13 @@ public class SignInTest extends BaseUI {
 
 	@Test
 	public void signInTest() {
-		invokeBrowser();
-		navigateToURL("https://music.youtube.com/");
-		quitBrowser();
+		navigateToURL("baseURL");
+		clickElement("signInButton_xpath");
+		enterText("emailField_id", "email");
+		clickElement("emailNextButton_id");
+		enterText("passwordField_id", "password");
+		clickElement("passwordNextButton_id");
+		
 	}
 
 }

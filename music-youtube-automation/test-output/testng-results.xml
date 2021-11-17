@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-16T23:11:05 WIB" name="Default suite" finished-at="2021-11-16T23:11:14 WIB" duration-ms="9394">
+  <suite started-at="2021-11-17T01:30:10 WIB" name="Default suite" finished-at="2021-11-17T01:30:29 WIB" duration-ms="19122">
     <groups>
     </groups>
-    <test started-at="2021-11-16T23:11:05 WIB" name="Default test" finished-at="2021-11-16T23:11:14 WIB" duration-ms="9394">
-      <class name="com.youtube.music.test.SignInTest">
-        <test-method signature="signInTest()[pri:0, instance:com.youtube.music.test.SignInTest@7d3a22a9]" started-at="2021-11-16T23:11:05 WIB" name="signInTest" finished-at="2021-11-16T23:11:14 WIB" duration-ms="9363" status="PASS">
+    <test started-at="2021-11-17T01:30:10 WIB" name="Default test" finished-at="2021-11-17T01:30:29 WIB" duration-ms="19122">
+      <class name="com.youtube.music.test.SearchSong">
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:com.youtube.music.test.SearchSong@27c86f2d]" started-at="2021-11-17T01:30:10 WIB" name="invokeBrowser" finished-at="2021-11-17T01:30:18 WIB" duration-ms="7405" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInTest -->
-      </class> <!-- com.youtube.music.test.SignInTest -->
+        </test-method> <!-- invokeBrowser -->
+        <test-method signature="searchNotExistSong()[pri:0, instance:com.youtube.music.test.SearchSong@27c86f2d]" started-at="2021-11-17T01:30:18 WIB" name="searchNotExistSong" finished-at="2021-11-17T01:30:20 WIB" duration-ms="2115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchNotExistSong -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:com.youtube.music.test.SearchSong@27c86f2d]" started-at="2021-11-17T01:30:20 WIB" name="quitBrowser" finished-at="2021-11-17T01:30:23 WIB" duration-ms="3167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:com.youtube.music.test.SearchSong@27c86f2d]" started-at="2021-11-17T01:30:23 WIB" name="invokeBrowser" finished-at="2021-11-17T01:30:25 WIB" duration-ms="1565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invokeBrowser -->
+        <test-method signature="searchSong()[pri:0, instance:com.youtube.music.test.SearchSong@27c86f2d]" started-at="2021-11-17T01:30:25 WIB" name="searchSong" finished-at="2021-11-17T01:30:26 WIB" duration-ms="1737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchSong -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:com.youtube.music.test.SearchSong@27c86f2d]" started-at="2021-11-17T01:30:26 WIB" name="quitBrowser" finished-at="2021-11-17T01:30:29 WIB" duration-ms="3108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- com.youtube.music.test.SearchSong -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

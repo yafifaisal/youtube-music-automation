@@ -14,6 +14,8 @@ Browser is limited to only Chrome version >= 95 and Firefox any version.
 
 - JDK version 16
 - Chrome version >= 95
+- chromedriver version 95
+- geckodriver
 
 ### Executing Test
 

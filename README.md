@@ -15,11 +15,6 @@ Browser is limited to only Chrome version >= 95 and Firefox any version.
 - JDK version 16
 - Chrome version >= 95
 
-### Installing
-
-- How/where to download your program
-- Any modifications needed to be made to files/folders
-
 ### Executing Test
 
 From Terminal

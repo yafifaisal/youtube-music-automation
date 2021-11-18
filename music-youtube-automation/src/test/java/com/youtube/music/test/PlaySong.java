@@ -76,8 +76,9 @@ public class PlaySong extends BaseUI {
 		clickElement("topResultPlayButton_xpath");
 		assertElementDisplayed("songControlPanel_id");
 		assertElementDisplayed("pauseButton_xpath");
+		// wait to skip ad
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(20000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -93,6 +94,7 @@ public class PlaySong extends BaseUI {
 		scrollDownToElement("topResultPlaylist_xpath");
 		assertElementDisplayed("topResultPlaylist_xpath");
 		clickElement("fetauredPlaylistPlayButton_xpath");
+		// wait to skip ad
 		try {
 			Thread.sleep(20000);
 		} catch (InterruptedException e) {
@@ -119,6 +121,7 @@ public class PlaySong extends BaseUI {
 		scrollDownToElement("topResultPlaylist_xpath");
 		assertElementDisplayed("topResultPlaylist_xpath");
 		clickElement("fetauredPlaylistPlayButton_xpath");
+		// wait to skip ad
 		try {
 			Thread.sleep(20000);
 		} catch (InterruptedException e) {
@@ -136,6 +139,63 @@ public class PlaySong extends BaseUI {
 		clickElement("previousSongButton_xpath");
 		String afterTitleSong = getElementText("currentTitleSong_xpath");
 		assertTextEquals(currentTitleSong, afterTitleSong);
+	}
+
+	@Test
+	public void mutePlayedSong() {
+		navigateToURL("baseURL");
+		clickElement("searchIcon_xpath");
+		enterText("searchField_xpath", "songTitle");
+		scrollDownToElement("topResultPlaylist_xpath");
+		assertElementDisplayed("topResultPlaylist_xpath");
+		clickElement("fetauredPlaylistPlayButton_xpath");
+		// wait to skip ad
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		clickElement("muteSongButton_xpath");
+		assertElementDisplayed("unmuteSongButton_xpath");
+	}
+
+	@Test
+	public void repeatPlaylist() {
+		navigateToURL("baseURL");
+		clickElement("searchIcon_xpath");
+		enterText("searchField_xpath", "songTitle");
+		scrollDownToElement("topResultPlaylist_xpath");
+		assertElementDisplayed("topResultPlaylist_xpath");
+		clickElement("fetauredPlaylistPlayButton_xpath");
+		// wait to skip ad
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// repeat all song
+		clickElement("repeatOffButton_xpath");
+		assertElementDisplayed("repeatAllButton_xpath");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// repeat one song
+		clickElement("repeatAllButton_xpath");
+		assertElementDisplayed("repeatOneButton_xpath");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// repeat off
+		clickElement("repeatOneButton_xpath");
+		assertElementDisplayed("repeatOffButton_xpath");
 	}
 
 }

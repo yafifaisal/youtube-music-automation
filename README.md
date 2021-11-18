@@ -25,7 +25,3 @@ From Terminal
 From Eclipse
 - Open project from eclipse
 - Run test by TestNG compiler
-
-```
-code blocks for commands
-```

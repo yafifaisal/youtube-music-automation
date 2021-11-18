@@ -19,11 +19,7 @@ Browser is limited to only Chrome version >= 95 and Firefox any version.
 
 ### Executing Test
 
-From Terminal
-- Unzip project
-- Open Terminal and navigate to project directory
-- Run with command `mvn test` 
-
 From Eclipse
+- Unzip project
 - Open project from eclipse
 - Run test by TestNG compiler
